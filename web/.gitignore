@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+test-results
+playwright-report
+*.tsbuildinfo
+e2e/visual/report
+# app Android: llaves de firma (NUNCA en el repositorio)
+android/keystore.properties
+*.jks
+*.keystore

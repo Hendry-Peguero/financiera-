@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5080",
+      "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" }
+    },
+    "http-provisional": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5080",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings__Fiscalizacion": "Server=.\\SQLEXPRESS;Database=Fiscalizacion_Provisional;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true",
+        "Fotos__Ruta": "App_Data/provisional/fotos",
+        "Pdf__Ruta": "App_Data/provisional/pdf",
+        "App__Ruta": "App_Data/app"
+      }
+    },
+    "red-provisional": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://0.0.0.0:5080",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings__Fiscalizacion": "Server=.\\SQLEXPRESS;Database=Fiscalizacion_Provisional;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true",
+        "Fotos__Ruta": "App_Data/provisional/fotos",
+        "Pdf__Ruta": "App_Data/provisional/pdf",
+        "App__Ruta": "App_Data/app",
+        "Cors__Origenes__0": "http://localhost:5173",
+        "Cors__Origenes__1": "http://localhost",
+        "Cors__Origenes__2": "https://localhost"
+      }
+    }
+  }
+}

@@ -1,0 +1,524 @@
+/* Historial (desktop-historial / tablet-h-historial / tablet-v-historial / movil-historial) */
+.hist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 28px;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.t-tablet-h .hist {
+  gap: 12px;
+  padding: 14px 20px;
+}
+.t-tablet-v .hist-encabezado {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.hist-tarjeta-tabla {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.hist-error {
+  padding: 12px 16px;
+}
+
+/* Pestañas con conteo */
+.hist-pestanas {
+  display: flex;
+  gap: 22px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.hist-pestana {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 39px;
+  padding: 12px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hist-pestana.activa {
+  color: var(--primary);
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--primary);
+}
+.hist-conteo {
+  padding: 1px 7px;
+  border-radius: 10px;
+  background: var(--neutral-soft);
+  font-size: 11px;
+  font-weight: 600;
+}
+.hist-pestana.activa .hist-conteo {
+  background: var(--primary-soft);
+}
+
+/* Filtros */
+.hist-filtros {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 58px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.hist-filtros-extra {
+  background: var(--surface-alt);
+}
+.hist-caja {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--text-2);
+  font-size: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hist-caja > svg {
+  color: var(--muted);
+}
+.hist-caja-t {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hist-buscar {
+  flex: 1 1 0;
+  min-width: 120px;
+}
+.hist-buscar input {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: inherit;
+  color: var(--text);
+}
+.hist-buscar input::placeholder {
+  color: var(--text-2);
+}
+.hist-sel {
+  cursor: pointer;
+}
+.hist-sel select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+.hist-sel:focus-within {
+  outline: 2px solid var(--accent);
+}
+.hist-mas {
+  gap: 6px;
+  padding: 0 12px;
+  font-weight: 600;
+}
+.hist-pop-cont {
+  position: relative;
+  flex-shrink: 0;
+}
+.hist-pop {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 260px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  box-shadow: var(--sombra-tarjeta);
+}
+.hist-pop-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+.hist-pop-campo input {
+  height: 34px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text);
+}
+.hist-pop-acciones {
+  display: flex;
+  gap: 8px;
+}
+.hist-pop-acciones .btn {
+  flex: 1 1 0;
+  height: 30px;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+/* Tabla */
+.hist-tabla {
+  overflow-y: auto;
+  min-height: 0;
+  flex-shrink: 1;
+}
+.hist-cab,
+.hist-fila {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+}
+.hist-cab {
+  height: 30px;
+  background: var(--surface-alt);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.hist-fila {
+  height: 39px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+.hist-fila:hover {
+  background: #f7fafe;
+}
+.hist-cab > span,
+.hist-fila > span {
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hist-tabla .c-check {
+  width: 28px;
+  display: flex;
+}
+.hist-check {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  border-radius: 4px;
+  background: var(--surface);
+  outline: 1px solid var(--border-fuerte);
+  outline-offset: -0.5px;
+  cursor: pointer;
+}
+.hist-check:checked {
+  background: var(--primary)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")
+    center / 11px no-repeat;
+  outline-color: var(--primary);
+}
+.hist-tabla .c-num {
+  width: 90px;
+}
+.hist-num {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+.hist-tabla .c-fecha {
+  width: 92px;
+}
+.hist-tabla .c-destino {
+  flex: 1 1 0;
+  flex-shrink: 1;
+  min-width: 0;
+}
+.hist-tabla .c-suplidor {
+  width: 150px;
+}
+.hist-tabla .c-autor {
+  width: 130px;
+}
+.hist-fila .c-autor {
+  color: var(--text-2);
+}
+.hist-tabla .c-prov,
+.hist-tabla .c-gal {
+  width: 96px;
+}
+.hist-tabla .c-dif {
+  width: 72px;
+}
+.hist-tabla .c-rev {
+  width: 44px;
+}
+.hist-fila .mono {
+  font-size: 12px;
+}
+.hist-tabla .c-estado {
+  width: 126px;
+  display: flex;
+}
+.hist-tabla .c-menu {
+  width: 24px;
+  display: flex;
+  justify-content: flex-end;
+  overflow: visible;
+}
+
+/* Tabla compacta (Tablet V): N.º y fecha en una celda */
+.hist-tabla.compacta .hist-cab,
+.hist-tabla.compacta .hist-fila {
+  gap: 10px;
+  padding: 0 14px;
+}
+.hist-tabla.compacta .hist-cab {
+  height: 32px;
+}
+.hist-tabla.compacta .hist-fila {
+  height: 55px;
+}
+.hist-tabla.compacta .c-numfecha {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 84px;
+}
+.hist-fecha-s {
+  font-size: 10.5px;
+  color: var(--muted);
+}
+.hist-tabla.compacta .c-suplidor {
+  width: 124px;
+}
+.hist-tabla.compacta .c-gal {
+  width: 84px;
+}
+.hist-tabla.compacta .c-estado {
+  width: 120px;
+}
+.hist-esp {
+  flex: 1 1 0;
+}
+
+/* Menú ⋮ */
+.hist-menu-cont {
+  position: relative;
+  display: flex;
+}
+.hist-menu-btn {
+  display: flex;
+  color: var(--text-2);
+  border-radius: 4px;
+}
+.hist-menu {
+  position: absolute;
+  right: 0;
+  top: 22px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  min-width: 170px;
+  padding: 4px;
+  border-radius: 8px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  box-shadow: var(--sombra-tarjeta);
+}
+.hist-menu button {
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: left;
+  color: var(--text);
+}
+.hist-menu button:hover {
+  background: var(--surface-alt);
+}
+.hist-menu .peligro {
+  color: var(--danger);
+}
+.hist-menu-error {
+  padding: 6px 10px;
+  font-size: 11px;
+  color: var(--danger);
+  white-space: normal;
+}
+
+/* ───────── Móvil ───────── */
+.hist-m {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+.hist-m-buscar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.hist-m-buscar input {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text);
+}
+.hist-m-buscar input::placeholder {
+  color: var(--muted);
+}
+.hist-m-filtros {
+  display: flex;
+  color: var(--muted);
+}
+.hist-m-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hist-m-chips {
+  display: flex;
+  gap: 8px;
+  margin: 0 -16px;
+  padding: 0 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+.hist-chip {
+  padding: 7px 12px;
+  border-radius: 16px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hist-chip.activo {
+  background: var(--primary);
+  outline: none;
+  color: #fff;
+}
+.hist-m-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hist-m-mes {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+.hist-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+}
+.hist-t-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hist-t-id {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.hist-t-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.hist-t-t {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.hist-t-s {
+  font-size: 12px;
+  color: var(--muted);
+}
+.hist-t-nums {
+  display: flex;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.hist-t-n {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 0;
+}
+.hist-t-l {
+  font-size: 10px;
+  color: var(--muted);
+}
+.hist-t-v {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.hist-t-v.rojo {
+  color: var(--danger);
+}
+.hist-fila .rojo { color: var(--danger); }
+/* Como en el diseño, el destino no se corta: si hace falta, cede el autor. */
+.hist-fila .c-destino {
+  min-width: max-content;
+}
+.hist-fila .c-autor {
+  flex-shrink: 1;
+  min-width: 0;
+}
+.hist-tabla.compacta .hist-fila .c-destino {
+  min-width: 0;
+}

@@ -1,0 +1,299 @@
+/* Bitácora (solo propietario): sobre las clases del Historial (hist-*) */
+
+.bit-filtros {
+  flex-wrap: nowrap;
+}
+.bit-filtros .hist-buscar {
+  flex: 1 1 0;
+}
+.bit-filtros .bit-usuario {
+  flex: 0 1 220px;
+}
+.bit-filtros .bit-entidad {
+  flex: 0 1 180px;
+}
+.bit-fecha-caja {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+.bit-fecha-caja input {
+  width: 118px;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+.bit-fecha-caja .hist-caja-t {
+  color: var(--muted);
+}
+
+/* Tabla */
+.bit-fila {
+  cursor: pointer;
+}
+.bit-fila:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+.bit-fila.abierta {
+  background: var(--primary-soft);
+  border-bottom-color: transparent;
+}
+.bit-tabla .c-abrir {
+  display: flex;
+  width: 16px;
+  color: var(--muted);
+}
+.bit-fila .c-abrir svg {
+  transition: transform 0.15s;
+}
+.bit-fila.abierta .c-abrir svg {
+  transform: rotate(90deg);
+  color: var(--primary);
+}
+.bit-tabla .c-momento {
+  width: 138px;
+}
+.bit-fecha {
+  color: var(--text);
+}
+.bit-hora {
+  color: var(--muted);
+  font-size: 12px;
+}
+.bit-tabla .c-usuario {
+  width: 200px;
+  color: var(--text-2);
+}
+.bit-tabla .c-tipo,
+.bit-tabla .c-metodo,
+.bit-tabla .c-accion,
+.bit-tabla .c-estado {
+  width: 96px;
+}
+.bit-tabla .c-ms {
+  width: 80px;
+  text-align: right;
+  color: var(--text-2);
+  font-size: 12px;
+}
+.bit-tabla .c-ruta {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.bit-tabla .c-elemento {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.bit-tabla .c-entidad {
+  width: 160px;
+}
+.bit-tabla .c-id {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.t-tablet-v .bit-tabla .c-usuario {
+  width: 150px;
+}
+.t-tablet-v .bit-ui .c-ruta,
+.t-tablet-v .bit-api .c-ms {
+  display: none;
+}
+.bit-vacio {
+  color: var(--muted);
+}
+
+/* Chips */
+.bit-chip,
+.bit-metodo {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 10px;
+  background: var(--surface-alt);
+  color: var(--text-2);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.bit-ui-click {
+  background: var(--info-soft);
+  color: var(--primary);
+}
+.bit-ui-navegacion {
+  background: var(--purple-soft);
+  color: var(--purple);
+}
+.bit-ui-envio,
+.bit-ui-online,
+.bit-st-ok,
+.bit-ac-Crear {
+  background: var(--success-soft);
+  color: var(--success);
+}
+.bit-ui-offline,
+.bit-st-aviso,
+.bit-ac-Modificar {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+.bit-ui-error,
+.bit-st-mal,
+.bit-ac-Eliminar {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+.bit-metodo {
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.3px;
+}
+.bit-m-GET {
+  background: var(--info-soft);
+  color: var(--primary);
+}
+.bit-m-POST {
+  background: var(--success-soft);
+  color: var(--success);
+}
+.bit-m-PUT {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+.bit-m-DELETE {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+/* Detalle de la fila */
+.bit-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px 16px 40px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+.bit-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+}
+.bit-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  max-width: 100%;
+}
+.bit-dato-l {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.bit-dato-v {
+  font-size: 12px;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.bit-jsons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.bit-json {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.bit-json-t {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.bit-json pre {
+  max-height: 240px;
+  margin: 0;
+  padding: 10px 12px;
+  overflow: auto;
+  border-radius: 6px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--text);
+  font-size: 11.5px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Móvil */
+.bit-m-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bit-m-filtros .hist-caja {
+  width: 100%;
+}
+.bit-m-filtros .bit-fecha-caja input {
+  flex: 1 1 0;
+}
+.bit-tarjeta {
+  padding: 0;
+  overflow: hidden;
+}
+.bit-t-cab {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.bit-t-fila {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bit-t-momento {
+  margin-left: auto;
+  font-size: 12px;
+}
+.bit-t-principal {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.bit-t-sub {
+  font-size: 12px;
+  color: var(--text-2);
+}
+.bit-tarjeta .bit-detalle {
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+  border-bottom: 0;
+}
+.bit-tarjeta .bit-jsons {
+  grid-template-columns: 1fr;
+}

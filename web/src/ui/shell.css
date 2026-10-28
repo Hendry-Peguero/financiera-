@@ -1,0 +1,502 @@
+/* Marco de la app: Sidebar (Desktop), Rail (Tablet H), Topbar, Header móvil y Bottom nav. */
+.shell {
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--bg);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+}
+.contenido {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ───────── Sidebar ───────── */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: var(--sidebar-w);
+  height: 100%;
+  padding: 16px 12px;
+  background: var(--nav-bg);
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+.sb-marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px;
+}
+.sb-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  flex-shrink: 0;
+}
+.sb-marca-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.sb-nombre {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+.sb-sub {
+  color: var(--nav-texto);
+  font-size: 10px;
+  /* al 80 % no cabe en una línea (piso de 10px): dos líneas parejas, sin «EGEHID» suelto */
+  text-wrap: balance;
+}
+.sb-seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sb-titulo {
+  color: var(--nav-titulo);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+.sb-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: var(--nav-texto);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.sb-item:hover {
+  background: #12375980;
+}
+.sb-item.activo {
+  background: var(--nav-activo);
+  color: #fff;
+  font-weight: 600;
+}
+.sb-esp {
+  flex: 1 1 0;
+}
+.sb-estado {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  outline: 1px solid var(--nav-borde);
+  outline-offset: -0.5px;
+}
+.sb-estado-fila {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sb-punto,
+.rl-punto {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--en-linea);
+  flex-shrink: 0;
+}
+.sb-punto.pend,
+.rl-punto.pend {
+  background: var(--amber);
+}
+.sb-estado-t {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+.sb-estado-s {
+  color: var(--nav-texto);
+  font-size: 10px;
+  text-wrap: balance;
+}
+.sb-usuario {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--nav-activo);
+}
+.sb-usuario-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.sb-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.sb-usuario-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.sb-usuario-nombre {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sb-usuario-rol {
+  color: var(--nav-texto);
+  font-size: 10px;
+}
+.sb-salir {
+  display: flex;
+  color: var(--nav-texto);
+}
+
+/* ───────── Rail (Tablet H) ───────── */
+.rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: var(--rail-w);
+  height: 100%;
+  padding: 16px 8px;
+  background: var(--nav-bg);
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+.rl-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  flex-shrink: 0;
+}
+.rl-sep {
+  height: 14px;
+  width: 40px;
+  flex-shrink: 0;
+}
+.rl-nav {
+  display: contents;
+}
+.rl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 68px;
+  padding: 8px 0;
+  border-radius: 10px;
+  color: var(--nav-texto);
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  flex-shrink: 0;
+}
+.rl-item.activo {
+  background: var(--nav-activo);
+  color: #fff;
+  font-weight: 700;
+}
+.rl-esp {
+  flex: 1 1 0;
+  width: 10px;
+}
+.rl-estado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 68px;
+  padding: 8px 0;
+  color: var(--nav-texto);
+  font-size: 9px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.rl-punto {
+  width: 8px;
+  height: 8px;
+}
+.rl-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ───────── Topbar ───────── */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 56px;
+  padding: 0 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.tb-migas {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  white-space: nowrap;
+}
+.tb-raiz {
+  color: var(--muted);
+  font-size: 13px;
+}
+.tb-sep {
+  color: var(--muted);
+}
+.tb-actual {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tb-derecha {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.tb-buscar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 300px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: var(--surface-alt);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--muted);
+}
+.tb-buscar:focus-within {
+  outline: 1.5px solid var(--primary);
+}
+.tb-buscar input {
+  flex: 1 1 0;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 12px;
+  color: var(--text);
+  padding: 0;
+}
+.tb-buscar input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.chip-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.chip-off {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+.chip-sync {
+  background: var(--info-soft);
+  color: var(--primary);
+}
+.chip-on {
+  background: var(--success-soft);
+  color: var(--success);
+}
+.campana {
+  position: relative;
+  display: flex;
+  color: var(--text-2);
+}
+.campana-clara {
+  color: #fff;
+}
+.campana-cuenta {
+  position: absolute;
+  top: -6px;
+  right: -7px;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  outline: 2px solid var(--surface);
+}
+.campana-clara .campana-cuenta {
+  outline-color: var(--nav-bg);
+}
+
+/* ───────── Header móvil ───────── */
+.hm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 96px;
+  padding: 0 16px 14px;
+  background: var(--nav-bg);
+  flex-shrink: 0;
+}
+.hm-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.hm-izq {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.hm-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  flex-shrink: 0;
+}
+.hm-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.hm-titulo {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hm-sub {
+  color: var(--nav-texto);
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hm-der {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.hm-btn {
+  display: flex;
+  color: #fff;
+}
+
+/* ───────── Bottom nav (Tablet V y Móvil) ───────── */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  height: 84px;
+  padding: 8px 8px 22px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.bn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 72px;
+  padding: 6px 0;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+}
+.bn-item.activo {
+  color: var(--primary);
+  font-weight: 600;
+}
+.t-tablet-v .bn-item.activo {
+  font-weight: 700;
+}
+.bn-nueva {
+  padding: 0;
+}
+.bn-fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--sombra-fab);
+}
+

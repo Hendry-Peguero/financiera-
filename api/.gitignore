@@ -1,0 +1,6 @@
+bin/
+obj/
+logs/
+App_Data/
+*.user
+.vs/

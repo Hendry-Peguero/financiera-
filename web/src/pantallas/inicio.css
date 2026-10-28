@@ -1,0 +1,366 @@
+/* Inicio (desktop-inicio / tablet-h-inicio / tablet-v-inicio / movil-inicio) */
+.ini {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 28px;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.t-tablet-h .ini {
+  gap: 12px;
+  padding: 14px 20px;
+}
+.ini-kpis {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.ini-kpis-fila {
+  display: flex;
+  gap: 14px;
+  flex: 2 1 0;
+  min-width: 0;
+}
+.t-tablet-v .ini-kpis {
+  flex-direction: column;
+  gap: 12px;
+}
+.ini-rejilla {
+  display: flex;
+  gap: 16px;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.t-tablet-v .ini-rejilla {
+  flex-direction: column;
+  flex: none;
+}
+.ini-actividad {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.t-tablet-v .ini-actividad {
+  flex: none;
+}
+.ini-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 340px;
+  flex-shrink: 0;
+}
+.t-tablet-v .ini-lateral {
+  width: 100%;
+}
+.ini-cab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 41px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+/* Tabla */
+.ini-tabla {
+  overflow-y: auto;
+  min-height: 0;
+}
+.ini-tabla .c-num {
+  width: 80px;
+}
+.ini-tabla .c-fecha {
+  width: 90px;
+}
+.ini-tabla .c-destino {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.ini-tabla .c-suplidor {
+  width: 140px;
+}
+.ini-tabla .c-gal {
+  width: 100px;
+}
+.ini-tabla .c-dif {
+  width: 90px;
+}
+.ini-tabla .c-estado {
+  width: 130px;
+  display: flex;
+}
+.t-tablet-v .ini-tabla .c-num {
+  width: 60px;
+}
+.t-tablet-v .ini-tabla .c-fecha {
+  width: 84px;
+}
+.t-tablet-v .ini-tabla .c-suplidor {
+  width: 128px;
+}
+.t-tablet-v .ini-tabla .c-gal {
+  width: 92px;
+}
+.t-tablet-v .ini-tabla .c-dif {
+  width: 78px;
+}
+.t-tablet-v .ini-tabla .c-estado {
+  width: 124px;
+}
+.ini-tabla .tabla-fila .c-num {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+.ini-tabla .tabla-fila .mono {
+  font-size: 13px;
+}
+.ini-tabla .tabla-fila .c-num.mono {
+  font-size: 12px;
+}
+.rojo {
+  color: var(--danger);
+}
+.clicable {
+  cursor: pointer;
+}
+.clicable:hover {
+  background: var(--surface-alt);
+}
+
+/* Listas laterales */
+.ini-lista {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.ini-avisos {
+  flex: 1 1 0;
+}
+.t-tablet-v .ini-avisos {
+  flex: none;
+}
+.ini-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 60px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+}
+.ini-form-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.ini-form-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.ini-form-t {
+  font-size: 13px;
+  font-weight: 600;
+}
+.ini-form-s {
+  font-size: 11px;
+  color: var(--muted);
+}
+.ini-ir {
+  color: var(--primary);
+}
+.ini-aviso {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.ini-aviso-i {
+  color: var(--warning);
+}
+.ini-aviso-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.ini-aviso-t {
+  font-size: 12px;
+  font-weight: 600;
+}
+.ini-aviso-s {
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--text-2);
+}
+.ini-aviso-vacio {
+  padding: 12px 16px;
+  font-size: 12px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+.ini-nota {
+  padding: 10px 16px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--muted);
+}
+
+/* ───────── Móvil ───────── */
+.ini-movil {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+}
+.ini-m-kpis {
+  display: flex;
+  gap: 10px;
+}
+.ini-m-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 0;
+  padding: 12px;
+  border-radius: 10px;
+}
+.ini-m-kpi-i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+}
+.ini-m-kpi-v {
+  font-size: 20px;
+  font-weight: 700;
+}
+.ini-m-kpi-l {
+  font-size: 11px;
+  color: var(--text-2);
+}
+.ini-continuar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--nav-bg);
+}
+.ini-continuar-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ini-continuar-e {
+  color: var(--accent-claro);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.ini-continuar-s {
+  color: var(--nav-texto);
+  font-size: 10px;
+}
+.ini-continuar-t {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+.ini-continuar-barra {
+  display: flex;
+  height: 6px;
+  border-radius: 3px;
+  background: #ffffff26;
+}
+.ini-continuar-barra > span {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+.ini-continuar-p {
+  color: var(--nav-texto);
+  font-size: 11px;
+}
+.ini-m-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ini-m-titulo h2 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.ini-m-titulo a {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+.ini-m-lista {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ini-m-fila {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 62px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--border);
+}
+.ini-m-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--fuel-soft);
+  color: var(--fuel);
+  flex-shrink: 0;
+}
+.ini-m-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.ini-m-t {
+  font-size: 14px;
+  font-weight: 600;
+}
+.ini-m-s {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.ini-m-der {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.ini-m-g {
+  font-size: 12px;
+  font-weight: 600;
+}
+.ini-m-der .badge {
+  font-size: 10px;
+}

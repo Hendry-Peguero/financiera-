@@ -1,0 +1,180 @@
+/* «Dar acceso para firmar en su tablet» (desktop-firmas-dar-acceso-al-formulario) */
+.da-dialogo .dlg-cab {
+  height: 75px;
+  border-bottom: 0;
+  box-shadow: inset 0 -1px 0 var(--border);
+}
+.da-dialogo .dlg-pie {
+  height: 70px;
+  border-top: 0;
+  box-shadow: inset 0 1px 0 var(--border);
+}
+.da-dialogo .dlg-pie .btn > svg {
+  color: inherit;
+}
+.da-dialogo .dlg-pie .btn:not(.btn-primario) > svg {
+  color: var(--text-2);
+}
+.da-bloque {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.da-l {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.da-buscar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 8px;
+  outline: 1px solid var(--primary);
+  outline-offset: -0.5px;
+  color: var(--muted);
+}
+.da-buscar input {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 13px;
+  color: var(--text);
+}
+.da-buscar input::placeholder {
+  color: var(--muted);
+}
+.da-resultados {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  overflow: hidden;
+}
+.da-usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 12px;
+  box-shadow: inset 0 -1px 0 var(--border);
+  width: 100%;
+}
+.da-usuario:last-child {
+  box-shadow: none;
+}
+.da-usuario.sel {
+  background: var(--primary-soft);
+}
+.da-usuario:not(.sel):hover {
+  background: var(--surface-alt);
+}
+.da-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: var(--neutral-soft);
+  color: var(--text-2);
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.da-usuario.sel .da-avatar {
+  background: var(--primary);
+  color: #fff;
+}
+.da-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.da-n {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.da-r {
+  font-size: 11px;
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.da-firma {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  background: var(--neutral-soft);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.da-firma.si {
+  background: var(--success-soft);
+  color: var(--success);
+}
+.da-sel {
+  color: var(--primary);
+}
+.da-vacio {
+  font-size: 12px;
+  color: var(--muted);
+}
+.da-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--surface-alt);
+}
+.da-lista li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text);
+}
+.da-lista .da-ok {
+  color: var(--success);
+}
+.da-lista .da-no {
+  color: var(--danger);
+}
+.da-lista .da-t2 {
+  color: var(--text-2);
+}
+.da-lista .da-vence {
+  padding-top: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.da-otra {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--surface-alt);
+  color: var(--text-2);
+  font-size: 11.5px;
+}
+.da-otra span {
+  flex: 1 1 0;
+}

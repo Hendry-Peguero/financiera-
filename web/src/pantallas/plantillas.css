@@ -1,0 +1,530 @@
+/* Plantillas (desktop / tablet-h / tablet-v-plantillas) */
+.pl {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 28px;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.t-tablet-h .pl {
+  gap: 12px;
+  padding: 14px 20px;
+}
+.t-tablet-v .pl,
+.t-movil .pl {
+  flex: none;
+}
+.t-tablet-v .pl-encabezado,
+.t-movil .pl-encabezado {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.t-movil .pl {
+  padding: 16px;
+}
+.pl-cuerpo {
+  display: flex;
+  gap: 14px;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.t-movil .pl-cuerpo {
+  flex-direction: column;
+}
+
+/* Lista de plantillas */
+.pl-lista {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  flex-shrink: 0;
+  overflow: hidden auto;
+}
+.t-tablet-v .pl-lista {
+  width: 210px;
+}
+.t-movil .pl-lista {
+  width: 100%;
+}
+.pl-lista-cab {
+  padding: 12px 14px;
+  height: 40px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.pl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  height: 78px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  flex-shrink: 0;
+}
+.pl-item.activo {
+  background: var(--primary-soft);
+  box-shadow: inset 2px 0 0 var(--primary);
+}
+.pl-item-t {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.pl-item.activo .pl-item-t {
+  color: var(--primary);
+}
+.pl-item-s {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Lienzo */
+.pl-columna {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.pl-lienzo {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  border-radius: 8px;
+  background: #e4e8ee;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  overflow: hidden;
+}
+.t-tablet-v .pl-lienzo,
+.t-movil .pl-lienzo {
+  flex: none;
+  height: 408px;
+}
+.pl-herramientas {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 43px;
+  padding: 8px 12px;
+  background: var(--surface);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.pl-herr {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.pl-herr.activa {
+  background: var(--primary);
+  outline: none;
+  color: #fff;
+}
+.pl-esp {
+  flex: 1 1 0;
+}
+.pl-paginacion {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.pl-area {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: auto;
+}
+.pl-pagina {
+  position: relative;
+  width: 440px;
+  height: 600px;
+  background: #fff;
+  box-shadow: 0 2px 10px #0a254026;
+  flex-shrink: 0;
+}
+.pl-pagina.agregando {
+  cursor: crosshair;
+}
+.pl-pdf-texto {
+  position: absolute;
+  color: var(--text);
+  line-height: normal;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.pl-pdf-linea {
+  position: absolute;
+  background: var(--muted-2);
+  pointer-events: none;
+}
+.pl-pdf-caja {
+  position: absolute;
+  outline: 0.75px solid var(--muted-2);
+  pointer-events: none;
+}
+.pl-campo-pdf {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: 3px;
+  background: #009fda14;
+  outline: 1px solid var(--accent);
+  outline-offset: -0.5px;
+  color: #0079a8;
+  font-size: 7px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: left;
+}
+.pl-campo-pdf.sel {
+  background: #0b4f8a1f;
+  outline: 2px solid var(--primary);
+  outline-offset: -1px;
+  color: var(--primary);
+}
+
+/* Propiedades */
+.pl-props {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 300px;
+  padding: 16px;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+.t-tablet-v .pl-props,
+.t-movil .pl-props {
+  width: 100%;
+}
+.pl-props-t {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.pl-vacio {
+  font-size: 12px;
+  color: var(--muted);
+}
+.pl-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.pl-etq {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.pl-caja {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--text);
+  font-size: 12px;
+}
+.pl-caja:focus-within,
+input.pl-caja:focus {
+  outline: 2px solid var(--accent);
+}
+.pl-caja > input,
+.pl-caja > select {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  outline: none;
+}
+.pl-caja > svg {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.pl-select {
+  position: relative;
+}
+.pl-select > select {
+  appearance: none;
+  cursor: pointer;
+}
+.pl-select > svg {
+  pointer-events: none;
+}
+.pl-posicion {
+  display: flex;
+  gap: 8px;
+}
+.pl-posicion > .pl-campo {
+  flex: 1 1 0;
+}
+.pl-switch-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.pl-switch {
+  appearance: none;
+  position: relative;
+  width: 34px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--border-fuerte);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.pl-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+}
+.pl-switch:checked {
+  background: var(--primary);
+}
+.pl-switch:checked::after {
+  left: 16px;
+}
+.pl-switch:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.t-tablet-v .pl-props .pl-esp,
+.t-movil .pl-props .pl-esp {
+  display: none;
+}
+
+.pl-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 96px;
+  transform: translateX(-50%);
+  max-width: min(520px, calc(100vw - 32px));
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--nav-bg);
+  color: #fff;
+  font-size: 12px;
+  box-shadow: var(--sombra-dialogo);
+  z-index: 40;
+}
+
+/* ---- Editor con la API (PDF base, arrastre, plantilla y versiones) ---- */
+.pl-lista-cab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pl-nueva {
+  display: inline-flex;
+  margin: -4px -6px -4px 0;
+  padding: 4px;
+  border-radius: 6px;
+  color: var(--muted);
+}
+.pl-nueva:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+.pl-lista-msj {
+  padding: 12px 14px;
+}
+.pl-herr:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.pl-paginas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 18px;
+}
+.pl-pdf-canvas,
+.pl-plano {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.pl-plano-titulo {
+  fill: var(--text);
+}
+.pl-plano-etq {
+  fill: var(--muted);
+}
+.pl-plano-linea {
+  fill: var(--text);
+}
+.pl-error-base {
+  padding: 24px;
+}
+.pl-campo-pdf {
+  touch-action: none;
+  overflow: visible;
+  cursor: move;
+}
+.pl-campo-pdf.error {
+  outline-color: var(--danger);
+  background: #c9372c14;
+}
+.pl-campo-pdf.sin-imprimir {
+  outline-style: dashed;
+}
+.pl-asa {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  background: var(--primary);
+  cursor: nwse-resize;
+  touch-action: none;
+}
+.pl-errores {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 8px 10px 8px 24px;
+  border-radius: 6px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 12px;
+}
+.pl-nota {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--primary-soft);
+  color: var(--text-2);
+  font-size: 12px;
+}
+.pl-enlace {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.pl-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pl-versiones {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pl-version {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.pl-version:last-child {
+  border-bottom: 0;
+}
+.pl-version.activa {
+  background: var(--primary-soft);
+}
+.pl-version-t {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Pantallas táctiles: áreas de toque de al menos 32–40px sin cambiar el dibujo (como base.css) */
+@media (hover: none) {
+  :where(.pl-herr, .pl-nueva) {
+    position: relative;
+  }
+  :where(.pl-herr, .pl-nueva)::after,
+  .pl-campo-pdf::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  :where(.pl-herr, .pl-nueva)::after {
+    width: max(100%, 40px);
+    height: max(100%, 40px);
+  }
+  /* campos: 32px como mínimo (más grande taparía los vecinos) */
+  .pl-campo-pdf::before {
+    width: max(100%, 32px);
+    height: max(100%, 32px);
+  }
+  .pl-asa {
+    right: -8px;
+    bottom: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+  }
+  html:not(.escala-diseno) .pl-switch-fila {
+    min-height: 40px;
+  }
+  html:not(.escala-diseno) .pl-version {
+    min-height: 40px;
+  }
+}
+
+/* Encabezado del documento (código, versión y fechas) */
+.pl-encabezado {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pl-encabezado-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}

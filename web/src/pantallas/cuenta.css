@@ -1,0 +1,465 @@
+/* Mi cuenta y respaldo (desktop / tablet-h / tablet-v-mi-cuenta-y-respaldo, movil-mi-cuenta) */
+.cu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 28px;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.t-tablet-h .cu {
+  gap: 12px;
+  padding: 14px 20px;
+}
+.t-tablet-v .cu {
+  flex: none;
+}
+
+/* Banda de perfil */
+.cu-perfil {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--nav-bg) 0%, var(--primary) 100%);
+  flex-shrink: 0;
+}
+.cu-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.cu-perfil-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.cu-nombre {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+}
+.cu-correo {
+  font-size: 13px;
+  color: var(--nav-texto);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cu-rol {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background: #ffffff1f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cu-rol > svg {
+  color: var(--accent-claro);
+}
+
+/* Rejilla */
+.cu-rejilla {
+  display: flex;
+  gap: 16px;
+  flex: 1 1 0;
+  min-height: 0;
+}
+.t-tablet-v .cu-rejilla {
+  flex-direction: column;
+  flex: none;
+}
+.cu-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.cu-col-2 {
+  flex: none;
+  width: 420px;
+}
+.t-tablet-v .cu-col,
+.t-tablet-v .cu-col-2 {
+  flex: none;
+  width: 100%;
+}
+.cu-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  flex-shrink: 0;
+}
+.cu-sync,
+.cu-papelera {
+  flex: 1 1 auto;
+}
+.t-tablet-v .cu-sync,
+.t-tablet-v .cu-papelera {
+  flex: none;
+}
+.cu-cab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cu-cab-i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.cu-cab-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.cu-cab-t {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--text);
+}
+.cu-cab-s {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Respaldo */
+.cu-datos {
+  display: flex;
+  gap: 12px;
+}
+.cu-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--surface-alt);
+}
+.cu-dato-l {
+  font-size: 11px;
+  color: var(--muted);
+}
+.cu-dato-v {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cu-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cu-etq {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.cu-caja {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+}
+.cu-caja:focus-within {
+  outline: 2px solid var(--accent);
+}
+.cu-caja > input {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+}
+.cu-ojo {
+  display: flex;
+  color: var(--muted);
+}
+.cu-botones {
+  display: flex;
+  gap: 10px;
+}
+.cu-botones > .btn {
+  flex: 1 1 0;
+}
+.cu-aviso {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--warning-soft);
+  color: var(--warning);
+  font-size: 11px;
+  line-height: 16px;
+}
+.cu-aviso > svg {
+  flex-shrink: 0;
+}
+
+/* Sincronización */
+.cu-estado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+}
+.cu-estado-i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--neutral-soft);
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+.cu-estado-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.cu-estado-t {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.cu-estado-s {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cu-nota {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-2);
+}
+.cu-btn-sm {
+  height: 30px;
+  font-size: 12px;
+}
+
+/* Seguridad */
+.cu-filas {
+  display: flex;
+  flex-direction: column;
+}
+.cu-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 61px;
+  padding: 8px 0 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  width: 100%;
+}
+.cu-fila + .cu-fila {
+  height: 61px;
+}
+.cu-fila-textos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.cu-fila-t {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+.cu-fila-s {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.cu-ir {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+/* Papelera */
+.cu-borrado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+}
+.cu-borrado-t {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Perfil y firma (diálogo) */
+.cu-lienzo {
+  position: relative;
+  height: 160px;
+  border-radius: 8px;
+  outline: 1px dashed var(--border-fuerte);
+  background: var(--surface-alt);
+  touch-action: none;
+}
+.cu-firma {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  outline: 1px solid var(--border);
+}
+.cu-firma > img {
+  max-height: 70px;
+  max-width: 60%;
+}
+
+/* ───────── Móvil ───────── */
+.cu-movil {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+.cu-movil .cu-datos {
+  flex-direction: column;
+  gap: 8px;
+}
+.cu-movil .cu-botones {
+  flex-direction: column;
+}
+.cu-m-perfil {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  text-align: left;
+}
+.cu-m-avatar {
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+}
+.cu-m-nombre {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+.cu-m-correo {
+  font-size: 11px;
+  color: var(--muted);
+}
+.cu-m-perfil .badge {
+  margin-top: 0;
+}
+.cu-m-grupo {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+.cu-m-lista {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  overflow: hidden;
+}
+.cu-m-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  width: 100%;
+}
+.cu-m-item:last-child {
+  border-bottom: 0;
+}
+.cu-m-i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.cu-m-i.peligro {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+.cu-m-t {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.cu-m-t.peligro {
+  color: var(--danger);
+}

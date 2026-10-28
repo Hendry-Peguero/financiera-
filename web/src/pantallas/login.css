@@ -1,0 +1,260 @@
+/* Login y Primer ingreso (desktop-login, tablet-h-login, tablet-v-login, movil-login) */
+.acc {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+.acc.t-tablet-v {
+  flex-direction: column;
+}
+
+/* ───────── Panel de marca ───────── */
+.acc-marca {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 640px;
+  min-height: 100vh;
+  padding: 56px 64px;
+  background: linear-gradient(165.489deg, #0a2540 7.661%, #0b4f8a 92.339%);
+  flex-shrink: 0;
+}
+.t-tablet-h .acc-marca {
+  width: 520px;
+  padding: 48px;
+  background: linear-gradient(166.69deg, #0a2540 6.998%, #0b4f8a 93.002%);
+}
+.t-tablet-v .acc-marca {
+  width: 100%;
+  min-height: 0;
+  gap: 28px;
+  padding: 48px;
+  background: linear-gradient(149.934deg, #0a2540 17.34%, #0b4f8a 82.66%);
+}
+.acc-marca-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.acc-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #ffffff1f;
+  color: #fff;
+  flex-shrink: 0;
+}
+.acc-marca-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.acc-marca-nombre {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.acc-marca-sub {
+  color: var(--nav-texto);
+  font-size: 12px;
+}
+.acc-mensaje {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.acc-eyebrow {
+  color: var(--accent-claro);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+.acc-titular {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+}
+.acc-descripcion {
+  color: #c9d6e5;
+  font-size: 16px;
+  line-height: 26px;
+}
+.acc-rasgos {
+  display: flex;
+  gap: 28px;
+  padding-top: 16px;
+}
+.acc-rasgo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  /* como el diseño (tablet H): cada rasgo en una línea aunque la fila pase un poco del margen */
+  flex-shrink: 0;
+}
+.acc-rasgo-v {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+}
+.acc-rasgo-l {
+  color: var(--nav-texto);
+  font-size: 12px;
+}
+.acc-pie {
+  color: #8fa3ba;
+  font-size: 12px;
+}
+
+/* ───────── Panel de acceso y tarjeta ───────── */
+.acc-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 24px 0;
+}
+.acc-tarjeta {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: var(--sombra-tarjeta);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+}
+.acc-login {
+  gap: 22px;
+  width: 420px;
+  padding: 40px;
+}
+.acc-encabezado {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.acc-titulo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+.acc-texto {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-2);
+}
+.acc-campos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.acc-caja input[type='password'] {
+  letter-spacing: 1px;
+}
+.acc-opciones {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.acc-divisor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.acc-divisor > span {
+  flex: 1 1 0;
+  height: 1px;
+  background: var(--border);
+}
+.acc-nota {
+  font-size: 11px;
+  line-height: 17px;
+}
+
+/* ───────── Móvil ───────── */
+.acc-movil {
+  flex-direction: column;
+  position: relative;
+}
+.acc-m-marca {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14px;
+  height: 340px;
+  padding: 0 24px 80px;
+  background: linear-gradient(157.34deg, #0a2540 12.692%, #0b4f8a 87.308%);
+  flex-shrink: 0;
+}
+.acc-m-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+.acc-m-eyebrow {
+  color: var(--accent-claro);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.acc-m-titular {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+}
+.acc-m-envoltorio {
+  margin-top: -50px;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+.acc-m-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0px 8px 24px #0a25401a;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+}
+.acc-m-titulo {
+  font-size: 20px;
+  font-weight: 700;
+}
+.acc-movil .caja {
+  height: 46px;
+}
+.acc-m-entrar {
+  height: 48px;
+  font-size: 15px;
+}
+.acc-m-enlaces {
+  display: flex;
+  justify-content: space-between;
+}
+.acc-m-enlaces .enlace {
+  font-size: 13px;
+}
+.acc-m-esp {
+  flex: 1 1 0;
+}
+.acc-m-pie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 24px 34px;
+  font-size: 11px;
+  color: var(--muted);
+}
