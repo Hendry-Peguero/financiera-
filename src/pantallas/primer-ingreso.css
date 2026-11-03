@@ -1,0 +1,308 @@
+/* Primer ingreso · Perfil y firma */
+.pi-tarjeta {
+  gap: 20px;
+  width: 520px;
+  padding: 36px;
+}
+.pi-pasos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pi-paso {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pi-circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.pi-hecho {
+  background: var(--success);
+}
+.pi-actual {
+  background: var(--primary);
+}
+.pi-paso-l {
+  font-size: 12px;
+  color: var(--muted);
+}
+.pi-paso-actual {
+  color: var(--text);
+  font-weight: 600;
+}
+.pi-conector {
+  flex: 1 1 0;
+  height: 1px;
+  background: var(--border);
+}
+.pi-datos {
+  display: flex;
+  gap: 12px;
+}
+.pi-firma {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pi-cab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pi-cab-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.pi-cab-t {
+  font-size: 14px;
+  font-weight: 600;
+}
+.pi-cab-s {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+/* Al 80 % (piso de 10px en los textos) no cabe junto al selector Dibujar/Subir: pasa a dos líneas. */
+html:not(.escala-diseno) .pi-cab-s {
+  white-space: normal;
+}
+.pi-modo {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 8px;
+  background: var(--surface-alt);
+  flex-shrink: 0;
+}
+.pi-modo-b {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.pi-modo-b.activo {
+  background: var(--surface);
+  box-shadow: 0px 1px 2px #0a254014;
+  color: var(--text);
+  font-weight: 600;
+}
+.pi-modo-b.activo > svg {
+  color: var(--primary);
+}
+.pi-lienzo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 140px;
+  border-radius: 8px;
+  background: var(--surface-alt);
+  outline: 1px solid var(--border-fuerte);
+  outline-offset: -0.5px;
+}
+.pi-lienzo-capa {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+}
+.pi-elegir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+.pi-lienzo-img {
+  position: absolute;
+  inset: 8px 8px 30px;
+  width: calc(100% - 16px);
+  height: calc(100% - 38px);
+  object-fit: contain;
+}
+.pi-trazo {
+  height: 53px;
+}
+.pi-linea {
+  width: 300px;
+  max-width: 80%;
+  height: 1px;
+  background: var(--border-fuerte);
+}
+.pi-pie {
+  font-size: 10px;
+  color: var(--muted);
+}
+.pi-herramientas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pi-casilla {
+  color: var(--text);
+  font-weight: 500;
+}
+.pi-casilla input:checked {
+  background-size: 11px 11px;
+}
+.pi-borrar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+.pi-acciones {
+  display: flex;
+  gap: 10px;
+}
+.pi-acciones .btn {
+  flex: 1 1 0;
+}
+
+/* ───────── Móvil ───────── */
+.pi-movil {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg);
+}
+.pi-m-marca {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 56px 24px 24px;
+  background: linear-gradient(144.635deg, #0a2540 20.364%, #0b4f8a 79.636%);
+  flex-shrink: 0;
+}
+.pi-m-eyebrow {
+  color: var(--accent-claro);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.pi-m-titular {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.pi-m-texto {
+  color: #c9d6e5;
+  font-size: 13px;
+  line-height: 19px;
+}
+.pi-m-progreso {
+  display: flex;
+  gap: 6px;
+  padding-top: 6px;
+}
+.pi-m-progreso > span {
+  flex: 1 1 0;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-claro);
+}
+.pi-m-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+}
+.pi-m-contenido .caja {
+  height: 46px;
+}
+.pi-m-contenido > .campo {
+  flex: none;
+}
+.pi-m-firma {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+}
+.pi-m-firma .pi-lienzo {
+  height: 130px;
+}
+.pi-m-firma .pi-trazo {
+  height: 48px;
+}
+.pi-m-firma .pi-linea {
+  width: 240px;
+}
+.pi-m-subir {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+.pi-m-firma .casilla input {
+  width: 18px;
+  height: 18px;
+}
+.pi-m-borrar {
+  color: var(--text-2);
+}
+.pi-m-borrar > svg {
+  color: var(--muted);
+}
+.pi-m-nota {
+  font-size: 11px;
+  line-height: 16px;
+}
+.pi-m-barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 116px;
+  padding: 14px 16px 28px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.pi-m-guardar {
+  width: 100%;
+  height: 48px;
+  font-size: 15px;
+}
+.pi-m-despues {
+  font-size: 13px;
+}
+
+/* Tablet y teléfono: recuadro de firma grande para firmar cómodo con el dedo (el escritorio conserva el diseño). */
+.t-tablet-h .pi-lienzo,
+.t-tablet-v .pi-lienzo {
+  height: 240px;
+}
+.t-movil .pi-m-firma .pi-lienzo {
+  height: 220px;
+}

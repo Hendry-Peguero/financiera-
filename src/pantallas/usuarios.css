@@ -1,0 +1,413 @@
+/* Usuarios (Administración). Sin pantalla en el diseño: reutiliza el Historial (historial.css) y agrega columnas,
+   avatar, chips de rol y el diálogo «Registrar usuario». */
+
+/* Tabla: filas de dos líneas (nombre + correo) como la tabla compacta del Historial */
+.usr-tabla .hist-fila {
+  height: 52px;
+  cursor: default;
+}
+.usr-tabla.compacta .hist-fila {
+  height: 55px;
+}
+.usr-tabla .c-usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 0;
+  flex-shrink: 1;
+  min-width: 0;
+}
+.usr-tabla .c-cargo {
+  width: 190px;
+}
+.usr-fila .c-cargo {
+  color: var(--text-2);
+}
+.usr-tabla .c-rol {
+  width: 118px;
+  display: flex;
+}
+.usr-tabla .c-acceso {
+  width: 112px;
+}
+.usr-fila .c-acceso {
+  color: var(--text-2);
+}
+.usr-tabla .c-reg {
+  width: 88px;
+  padding-right: 16px;
+  text-align: right;
+}
+.usr-tabla .c-estado {
+  width: 150px;
+  display: flex;
+}
+.usr-tabla .c-menu {
+  width: 24px;
+  display: flex;
+  justify-content: flex-end;
+  overflow: visible;
+}
+.t-tablet-h .usr-tabla .c-cargo {
+  width: 160px;
+}
+.usr-tabla.compacta .c-rol {
+  width: 112px;
+}
+.usr-tabla.compacta .c-acceso {
+  width: 104px;
+}
+.usr-tabla.compacta .c-estado {
+  width: 150px;
+}
+.usr-fila.inactivo .usr-nombre,
+.usr-fila.inactivo .c-cargo {
+  color: var(--muted);
+}
+
+/* Avatar con iniciales (como la tarjeta de usuario del menú) */
+.usr-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.usr-avatar.inactivo {
+  background: var(--muted-2);
+}
+.usr-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 0;
+}
+.usr-nombre {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.usr-correo {
+  font-size: 11px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.usr-usted {
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Chip de rol */
+.usr-rol-Administrador {
+  background: var(--info-soft);
+  color: var(--primary);
+}
+.usr-rol-Auditor {
+  background: var(--neutral-soft);
+  color: var(--text-2);
+}
+.usr-rol-Firmante {
+  background: var(--purple-soft);
+  color: var(--purple);
+}
+
+/* Menú ⋮ */
+.usr-menu {
+  min-width: 200px;
+}
+.usr-menu button {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.usr-menu button:disabled {
+  color: var(--muted-2);
+  cursor: not-allowed;
+}
+.usr-menu button:disabled:hover {
+  background: transparent;
+}
+.usr-menu-nota {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Móvil: tarjetas */
+.usr-tarjeta.inactivo .usr-nombre {
+  color: var(--muted);
+}
+.usr-t-fila {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.usr-tarjeta .usr-nombre {
+  font-size: 15px;
+}
+.usr-tarjeta .usr-correo {
+  font-size: 12px;
+}
+.usr-t-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.usr-t-cargo {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 8px;
+}
+.usr-tarjeta .hist-t-n {
+  min-width: 0;
+}
+.usr-t-reg {
+  flex: 0 0 auto;
+  align-items: flex-end;
+}
+
+/* Diálogo «Registrar usuario» */
+.usr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.usr-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.usr-etq {
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.usr-opcional {
+  font-weight: 400;
+  color: var(--muted);
+}
+.usr-caja {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--muted);
+}
+.usr-caja:focus-within {
+  outline: 2px solid var(--accent);
+}
+.usr-caja.invalida {
+  outline: 1.5px solid var(--danger);
+}
+.usr-caja > input {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+.usr-error {
+  font-size: 11px;
+  color: var(--danger);
+}
+.usr-roles {
+  gap: 8px;
+}
+.usr-roles legend {
+  margin-bottom: 5px;
+}
+.usr-opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  cursor: pointer;
+}
+.usr-opcion.activa {
+  background: var(--primary-soft);
+  outline-color: var(--primary);
+}
+.usr-opcion input {
+  margin: 2px 0 0;
+  accent-color: var(--primary);
+}
+.usr-opcion-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.usr-opcion-t {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.usr-opcion-s {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+/* ───────── Panel de roles (tarjetas que filtran) ───────── */
+.usr-panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.t-tablet-v .usr-panel {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.usr-kpi {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.usr-kpi:hover {
+  border-color: var(--border-fuerte);
+}
+.usr-kpi.activo {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+.usr-kpi-icono {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: var(--neutral-soft);
+  color: var(--text-2);
+}
+.usr-kpi-Administrador .usr-kpi-icono {
+  background: var(--info-soft);
+  color: var(--primary);
+}
+.usr-kpi-Firmante .usr-kpi-icono {
+  background: var(--purple-soft);
+  color: var(--purple);
+}
+.usr-kpi-pend .usr-kpi-icono {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+.usr-kpi-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1 1 0;
+}
+.usr-kpi-cab {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.usr-kpi-t {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.usr-kpi-n {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.usr-kpi-s {
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--muted);
+}
+.usr-m .usr-panel {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.usr-m .usr-kpi {
+  padding: 10px 12px;
+  gap: 10px;
+}
+.usr-m .usr-kpi-icono {
+  width: 30px;
+  height: 30px;
+}
+.usr-m .usr-kpi-s {
+  display: none;
+}
+
+/* ───────── Rol editable en la fila ───────── */
+.usr-rol-sel {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.usr-rol-sel select {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 4px 24px 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.usr-rol-sel select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+.usr-rol-sel select:disabled {
+  cursor: default;
+}
+.usr-rol-sel svg {
+  position: absolute;
+  right: 8px;
+  pointer-events: none;
+}
+.usr-rol-sel:has(select:disabled) svg {
+  opacity: 0.35;
+}

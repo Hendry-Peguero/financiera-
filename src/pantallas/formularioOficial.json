@@ -1,0 +1,822 @@
+{
+  "ancho": 612,
+  "alto": 792,
+  "campos": [
+    {
+      "id": "doc_codigo",
+      "tipo": "Texto",
+      "x": 101.5,
+      "y": 35.5,
+      "ancho": 74.0,
+      "alto": 12.0
+    },
+    {
+      "id": "doc_version",
+      "tipo": "Texto",
+      "x": 101.5,
+      "y": 58.5,
+      "ancho": 74.0,
+      "alto": 11.5
+    },
+    {
+      "id": "doc_fecha_elaboracion",
+      "tipo": "Fecha",
+      "x": 482.5,
+      "y": 35.5,
+      "ancho": 101.5,
+      "alto": 12.0
+    },
+    {
+      "id": "doc_fecha_aprobacion",
+      "tipo": "Fecha",
+      "x": 482.5,
+      "y": 58.5,
+      "ancho": 101.5,
+      "alto": 11.5
+    },
+    {
+      "id": "fecha",
+      "tipo": "Fecha",
+      "x": 99.5,
+      "y": 98.8,
+      "ancho": 217.8,
+      "alto": 11.2
+    },
+    {
+      "id": "inicio_proceso",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 98.8,
+      "ancho": 180.0,
+      "alto": 11.2
+    },
+    {
+      "id": "hora_llegada",
+      "tipo": "Texto",
+      "x": 99.5,
+      "y": 110.0,
+      "ancho": 217.8,
+      "alto": 12.2
+    },
+    {
+      "id": "fin_proceso",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 110.0,
+      "ancho": 180.0,
+      "alto": 12.2
+    },
+    {
+      "id": "hora_salida",
+      "tipo": "Texto",
+      "x": 99.5,
+      "y": 122.2,
+      "ancho": 217.8,
+      "alto": 12.4
+    },
+    {
+      "id": "locacion",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 122.2,
+      "ancho": 180.0,
+      "alto": 12.4
+    },
+    {
+      "id": "ficha_camion",
+      "tipo": "Texto",
+      "x": 25.0,
+      "y": 158.5,
+      "ancho": 89.2,
+      "alto": 12.1
+    },
+    {
+      "id": "chofer",
+      "tipo": "Texto",
+      "x": 114.2,
+      "y": 158.5,
+      "ancho": 77.6,
+      "alto": 12.1
+    },
+    {
+      "id": "placa",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 158.5,
+      "ancho": 89.8,
+      "alto": 12.1
+    },
+    {
+      "id": "conduce",
+      "tipo": "Texto",
+      "x": 281.6,
+      "y": 158.5,
+      "ancho": 74.6,
+      "alto": 12.1
+    },
+    {
+      "id": "suplidor",
+      "tipo": "Texto",
+      "x": 356.2,
+      "y": 158.5,
+      "ancho": 124.3,
+      "alto": 12.1
+    },
+    {
+      "id": "total_entregar_gal",
+      "tipo": "Numero",
+      "x": 480.5,
+      "y": 158.5,
+      "ancho": 105.5,
+      "alto": 12.1
+    },
+    {
+      "id": "empresa_ficha_camion",
+      "tipo": "Texto",
+      "x": 25.0,
+      "y": 191.6,
+      "ancho": 89.2,
+      "alto": 10.7
+    },
+    {
+      "id": "empresa_chofer",
+      "tipo": "Texto",
+      "x": 114.2,
+      "y": 191.6,
+      "ancho": 77.6,
+      "alto": 10.7
+    },
+    {
+      "id": "ficha_camion_2",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 191.6,
+      "ancho": 89.8,
+      "alto": 10.7
+    },
+    {
+      "id": "chofer_2",
+      "tipo": "Texto",
+      "x": 281.6,
+      "y": 191.6,
+      "ancho": 74.6,
+      "alto": 10.7
+    },
+    {
+      "id": "responsable",
+      "tipo": "Texto",
+      "x": 356.2,
+      "y": 191.6,
+      "ancho": 124.3,
+      "alto": 10.7
+    },
+    {
+      "id": "total_recibir_gal",
+      "tipo": "Numero",
+      "x": 480.5,
+      "y": 191.6,
+      "ancho": 105.5,
+      "alto": 10.7
+    },
+    {
+      "id": "medidor_digital_inicial",
+      "tipo": "Numero",
+      "x": 114.2,
+      "y": 225.7,
+      "ancho": 77.6,
+      "alto": 12.1
+    },
+    {
+      "id": "dispensador_inicial",
+      "tipo": "Numero",
+      "x": 191.8,
+      "y": 225.7,
+      "ancho": 125.5,
+      "alto": 12.1
+    },
+    {
+      "id": "electrobomba_inicial",
+      "tipo": "Numero",
+      "x": 317.3,
+      "y": 225.7,
+      "ancho": 88.7,
+      "alto": 12.1
+    },
+    {
+      "id": "vara_inicial_medida",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 225.7,
+      "ancho": 74.5,
+      "alto": 12.1
+    },
+    {
+      "id": "vara_inicial_galones",
+      "tipo": "Numero",
+      "x": 480.5,
+      "y": 225.7,
+      "ancho": 105.5,
+      "alto": 12.1
+    },
+    {
+      "id": "medidor_digital_final",
+      "tipo": "Numero",
+      "x": 114.2,
+      "y": 237.8,
+      "ancho": 77.6,
+      "alto": 11.8
+    },
+    {
+      "id": "dispensador_final",
+      "tipo": "Numero",
+      "x": 191.8,
+      "y": 237.8,
+      "ancho": 125.5,
+      "alto": 11.8
+    },
+    {
+      "id": "electrobomba_final",
+      "tipo": "Numero",
+      "x": 317.3,
+      "y": 237.8,
+      "ancho": 88.7,
+      "alto": 11.8
+    },
+    {
+      "id": "vara_final_medida",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 237.8,
+      "ancho": 74.5,
+      "alto": 11.8
+    },
+    {
+      "id": "vara_final_galones",
+      "tipo": "Numero",
+      "x": 480.5,
+      "y": 237.8,
+      "ancho": 105.5,
+      "alto": 11.8
+    },
+    {
+      "id": "medidor_digital_diferencia",
+      "tipo": "Formula",
+      "x": 114.2,
+      "y": 249.6,
+      "ancho": 77.6,
+      "alto": 10.3
+    },
+    {
+      "id": "dispensador_diferencia",
+      "tipo": "Formula",
+      "x": 191.8,
+      "y": 249.6,
+      "ancho": 125.5,
+      "alto": 10.3
+    },
+    {
+      "id": "electrobomba_diferencia",
+      "tipo": "Formula",
+      "x": 317.3,
+      "y": 249.6,
+      "ancho": 88.7,
+      "alto": 10.3
+    },
+    {
+      "id": "vara_diferencia_galones",
+      "tipo": "Formula",
+      "x": 406.0,
+      "y": 249.6,
+      "ancho": 180.0,
+      "alto": 10.3
+    },
+    {
+      "id": "galones_egehid",
+      "tipo": "Numero",
+      "x": 114.2,
+      "y": 259.9,
+      "ancho": 77.6,
+      "alto": 18.9
+    },
+    {
+      "id": "galones_proveedor",
+      "tipo": "Numero",
+      "x": 317.3,
+      "y": 259.9,
+      "ancho": 88.7,
+      "alto": 18.9
+    },
+    {
+      "id": "diferencia_gal",
+      "tipo": "Formula",
+      "x": 480.5,
+      "y": 259.9,
+      "ancho": 105.5,
+      "alto": 18.9
+    },
+    {
+      "id": "control_1",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 315.1,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_1_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 315.1,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_1_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 315.1,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_2",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 335.0,
+      "ancho": 38.9,
+      "alto": 20.0
+    },
+    {
+      "id": "control_2_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 335.0,
+      "ancho": 49.8,
+      "alto": 20.0
+    },
+    {
+      "id": "control_2_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 335.0,
+      "ancho": 180.0,
+      "alto": 20.0
+    },
+    {
+      "id": "control_3",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 355.0,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_3_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 355.0,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_3_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 355.0,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_4",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 374.9,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_4_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 374.9,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_4_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 374.9,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_5",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 394.8,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_5_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 394.8,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_5_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 394.8,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_6",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 414.7,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_6_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 414.7,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_6_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 414.7,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_7",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 434.6,
+      "ancho": 38.9,
+      "alto": 20.0
+    },
+    {
+      "id": "control_7_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 434.6,
+      "ancho": 49.8,
+      "alto": 20.0
+    },
+    {
+      "id": "control_7_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 434.6,
+      "ancho": 180.0,
+      "alto": 20.0
+    },
+    {
+      "id": "control_8",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 454.6,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_8_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 454.6,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_8_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 454.6,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_9",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 474.5,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_9_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 474.5,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_9_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 474.5,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_10",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 494.4,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_10_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 494.4,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_10_obs",
+      "tipo": "Fecha",
+      "x": 406.0,
+      "y": 494.4,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_11",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 514.3,
+      "ancho": 38.9,
+      "alto": 19.9
+    },
+    {
+      "id": "control_11_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 514.3,
+      "ancho": 49.8,
+      "alto": 19.9
+    },
+    {
+      "id": "control_11_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 514.3,
+      "ancho": 180.0,
+      "alto": 19.9
+    },
+    {
+      "id": "control_12",
+      "tipo": "Casilla",
+      "x": 317.3,
+      "y": 534.2,
+      "ancho": 38.9,
+      "alto": 20.0
+    },
+    {
+      "id": "control_12_no",
+      "tipo": "Casilla",
+      "x": 356.2,
+      "y": 534.2,
+      "ancho": 49.8,
+      "alto": 20.0
+    },
+    {
+      "id": "control_12_obs",
+      "tipo": "Texto",
+      "x": 406.0,
+      "y": 534.2,
+      "ancho": 180.0,
+      "alto": 20.0
+    },
+    {
+      "id": "auditor_actuante_1_nombre",
+      "tipo": "Texto",
+      "x": 114.2,
+      "y": 583.4,
+      "ancho": 77.6,
+      "alto": 14.2
+    },
+    {
+      "id": "auditor_actuante_1_apellido",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 583.4,
+      "ancho": 125.5,
+      "alto": 14.2
+    },
+    {
+      "id": "auditor_actuante_1_cedula",
+      "tipo": "Texto",
+      "x": 317.3,
+      "y": 583.4,
+      "ancho": 88.7,
+      "alto": 14.2
+    },
+    {
+      "id": "firma_auditor_actuante_1",
+      "tipo": "Firma",
+      "x": 406.0,
+      "y": 583.4,
+      "ancho": 180.0,
+      "alto": 14.2
+    },
+    {
+      "id": "auditor_actuante_2_nombre",
+      "tipo": "Texto",
+      "x": 114.2,
+      "y": 597.6,
+      "ancho": 77.6,
+      "alto": 14.2
+    },
+    {
+      "id": "auditor_actuante_2_apellido",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 597.6,
+      "ancho": 125.5,
+      "alto": 14.2
+    },
+    {
+      "id": "auditor_actuante_2_cedula",
+      "tipo": "Texto",
+      "x": 317.3,
+      "y": 597.6,
+      "ancho": 88.7,
+      "alto": 14.2
+    },
+    {
+      "id": "firma_auditor_actuante_2",
+      "tipo": "Firma",
+      "x": 406.0,
+      "y": 597.6,
+      "ancho": 180.0,
+      "alto": 14.2
+    },
+    {
+      "id": "encargado_recibir_nombre",
+      "tipo": "Texto",
+      "x": 114.2,
+      "y": 611.8,
+      "ancho": 77.6,
+      "alto": 14.1
+    },
+    {
+      "id": "encargado_recibir_apellido",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 611.8,
+      "ancho": 125.5,
+      "alto": 14.1
+    },
+    {
+      "id": "encargado_recibir_cedula",
+      "tipo": "Texto",
+      "x": 317.3,
+      "y": 611.8,
+      "ancho": 88.7,
+      "alto": 14.1
+    },
+    {
+      "id": "firma_encargado_recibir",
+      "tipo": "Firma",
+      "x": 406.0,
+      "y": 611.8,
+      "ancho": 180.0,
+      "alto": 14.1
+    },
+    {
+      "id": "supervisor_combustibles_nombre",
+      "tipo": "Texto",
+      "x": 114.2,
+      "y": 625.9,
+      "ancho": 77.6,
+      "alto": 14.2
+    },
+    {
+      "id": "supervisor_combustibles_apellido",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 625.9,
+      "ancho": 125.5,
+      "alto": 14.2
+    },
+    {
+      "id": "supervisor_combustibles_cedula",
+      "tipo": "Texto",
+      "x": 317.3,
+      "y": 625.9,
+      "ancho": 88.7,
+      "alto": 14.2
+    },
+    {
+      "id": "firma_supervisor_combustibles",
+      "tipo": "Firma",
+      "x": 406.0,
+      "y": 625.9,
+      "ancho": 180.0,
+      "alto": 14.2
+    },
+    {
+      "id": "representante_proveedor_nombre",
+      "tipo": "Texto",
+      "x": 114.2,
+      "y": 640.1,
+      "ancho": 77.6,
+      "alto": 14.1
+    },
+    {
+      "id": "representante_proveedor_apellido",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 640.1,
+      "ancho": 125.5,
+      "alto": 14.1
+    },
+    {
+      "id": "representante_proveedor_cedula",
+      "tipo": "Texto",
+      "x": 317.3,
+      "y": 640.1,
+      "ancho": 88.7,
+      "alto": 14.1
+    },
+    {
+      "id": "firma_representante_proveedor",
+      "tipo": "Firma",
+      "x": 406.0,
+      "y": 640.1,
+      "ancho": 180.0,
+      "alto": 14.1
+    },
+    {
+      "id": "precio_galon",
+      "tipo": "Numero",
+      "x": 114.2,
+      "y": 677.9,
+      "ancho": 77.6,
+      "alto": 14.1
+    },
+    {
+      "id": "importe_egehid",
+      "tipo": "Formula",
+      "x": 114.2,
+      "y": 692.0,
+      "ancho": 77.6,
+      "alto": 14.2
+    },
+    {
+      "id": "importe_proveedor",
+      "tipo": "Formula",
+      "x": 114.2,
+      "y": 706.2,
+      "ancho": 77.6,
+      "alto": 14.2
+    },
+    {
+      "id": "diferencia_importe",
+      "tipo": "Formula",
+      "x": 114.2,
+      "y": 720.4,
+      "ancho": 77.6,
+      "alto": 14.1
+    },
+    {
+      "id": "observaciones_generales",
+      "tipo": "Texto",
+      "x": 191.8,
+      "y": 677.9,
+      "ancho": 394.2,
+      "alto": 56.6
+    },
+    {
+      "id": "firma_inspector_actuante",
+      "tipo": "Firma",
+      "x": 178.6,
+      "y": 735.0,
+      "ancho": 105.9,
+      "alto": 18.0
+    },
+    {
+      "id": "firma_revisado_por",
+      "tipo": "Firma",
+      "x": 305.6,
+      "y": 735.0,
+      "ancho": 112.7,
+      "alto": 18.0
+    }
+  ]
+}

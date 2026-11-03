@@ -1,0 +1,647 @@
+/* Base y componentes compartidos. Valores tomados de design-ref/html (data-pencil-name entre comentarios). */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* Alto de línea de Pencil para Inter: tamaño × 1.21 redondeado al píxel (los textos con lh propio lo fijan aparte). */
+  line-height: round(nearest, 1.21em, 1px);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Escala de toda la interfaz: los px de los estilos salen como rem (vite.config.ts). 80 % = 20 % más compacta que el
+   diseño. La prueba visual la deja al 100 % (VITE_ESCALA_DISENO) para comparar contra design-ref. */
+html {
+  font-size: 80%;
+}
+html.escala-diseno {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ───────── Botones («Respaldo cifrado», «Nueva fiscalización») ───────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 6px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.btn > svg {
+  color: var(--text-2);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+}
+.btn:disabled {
+  opacity: 0.55;
+}
+.btn-primario {
+  background: var(--primary);
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-primario > svg {
+  color: #fff;
+}
+.btn-peligro {
+  color: var(--danger);
+  outline-color: var(--danger-borde);
+}
+.btn-peligro > svg {
+  color: var(--danger);
+}
+.btn-grande {
+  height: 42px;
+}
+.btn-ancho {
+  width: 100%;
+}
+.btn-icono {
+  width: 36px;
+  padding: 0;
+}
+
+.enlace {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ───────── Badge de estado («Finalizado», «Borrador»…) ───────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.badge-punto {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.b-Finalizado,
+.b-ok {
+  background: var(--success-soft);
+  color: var(--success);
+}
+.b-Borrador,
+.b-warn {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+.b-Modificado {
+  background: var(--purple-soft);
+  color: var(--purple);
+}
+.b-EdicionPendiente,
+.b-info {
+  background: var(--info-soft);
+  color: var(--primary);
+}
+.b-Papelera,
+.b-error {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+.b-neutral {
+  background: var(--neutral-soft);
+  color: var(--text-2);
+}
+
+/* ───────── Tarjetas ───────── */
+.tarjeta {
+  background: var(--surface);
+  border-radius: 8px;
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  min-width: 0;
+}
+.tarjeta-cab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 40px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+}
+.tarjeta-titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Cabecera con icono (Datos de la visita, Totales medidos…) */
+.cab-icono {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cab-icono-caja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.cab-icono-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.cab-icono-t {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.cab-icono-s {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ───────── Campos («Etiqueta» + «Caja») ───────── */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.campo-etiqueta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.caja {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: var(--surface);
+  outline: 1px solid var(--border);
+  outline-offset: -0.5px;
+  color: var(--muted);
+  width: 100%;
+  position: relative;
+}
+.caja:focus-within {
+  outline: 1.5px solid var(--primary);
+  outline-offset: -0.75px;
+}
+.caja.invalida {
+  outline: 1.5px solid var(--danger);
+}
+.caja input,
+.caja select,
+.caja-valor {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 13px;
+  color: var(--text);
+}
+.caja input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.caja select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 24px;
+  margin-right: -24px;
+}
+.caja select + svg {
+  pointer-events: none;
+}
+.caja .mono,
+.caja input.mono {
+  font-family: var(--mono);
+}
+.caja-icono {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.caja-btn {
+  display: flex;
+  color: var(--muted);
+}
+.error-campo {
+  font-size: 11px;
+  color: var(--danger);
+}
+
+/* Casilla («Mantener sesión») */
+.casilla {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.casilla input {
+  appearance: none;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  outline: 1.5px solid var(--border-fuerte);
+  outline-offset: -0.75px;
+  background: var(--surface) no-repeat center / 12px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.casilla input:checked {
+  background-color: var(--primary);
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+}
+
+/* ───────── Avisos («Nota», «Aviso») ───────── */
+.aviso {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 17px;
+}
+.aviso > svg {
+  flex-shrink: 0;
+  margin-top: 0.5px;
+}
+.aviso-info {
+  background: var(--info-soft);
+  color: var(--primary);
+}
+.aviso-warn {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+.aviso-error {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+.aviso-ok {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+/* ───────── KPI («Finalizados este mes») ───────── */
+.kpi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.kpi-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.kpi-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.kpi-etiqueta {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--text-2);
+}
+.kpi-valor {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+.kpi-sub {
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--muted);
+}
+
+/* ───────── Encabezado de página («Títulos» + «Acciones») ───────── */
+.pag-encabezado {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  flex-shrink: 0;
+}
+.pag-titulos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.pag-titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+.pag-sub {
+  font-size: 13px;
+  color: var(--text-2);
+}
+.pag-acciones {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ───────── Tabla (Actividad reciente, Historial) ───────── */
+.tabla-cab,
+.tabla-fila {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+}
+.tabla-cab {
+  height: 30px;
+  background: var(--surface-alt);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.tabla-fila {
+  height: 41px;
+  font-size: 13px;
+  color: var(--text);
+}
+.tabla-fila > *,
+.tabla-cab > * {
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ───────── Vacío / cargando ───────── */
+.vacio {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ───────── Diálogo (Dar acceso…) ───────── */
+.velo {
+  position: fixed;
+  inset: 0;
+  background: #0a254080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+.dialogo {
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: var(--sombra-dialogo);
+  width: 560px;
+  max-width: 100%;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.dialogo-cab {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.dialogo-titulo {
+  font-size: 18px;
+  font-weight: 700;
+}
+.dialogo-cuerpo {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dialogo-pie {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 24px;
+  border-top: 1px solid var(--border);
+}
+
+/* ───────── Toast ───────── */
+.toast {
+  position: fixed;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--nav-bg);
+  color: #fff;
+  box-shadow: var(--sombra-dialogo);
+}
+
+/* ───────── Objetivos táctiles (tablet y móvil) ─────────
+   Al 80 % los botones del diseño quedan en ~29px y los íconos/enlaces sueltos en 13–20px. En pantallas sin puntero
+   fino: los .btn crecen a 32px reales (40px del diseño × 0.8) y los controles pequeños reciben un área de toque
+   invisible de al menos 32px, centrada, sin mover nada. En la prueba visual (escala-diseno) no cambia el tamaño. */
+@media (hover: none) {
+  html:not(.escala-diseno) .btn {
+    min-height: 40px;
+  }
+  :where(
+      .caja-btn,
+      .cu-ojo,
+      .hist-menu-btn,
+      .hist-m-filtros,
+      .hist-check,
+      .hist-chip,
+      .dlg-cerrar,
+      .fm-foto-quitar,
+      .fm-hoja-cerrar,
+      .fm-hm-btn,
+      .fm-toast-ir,
+      .fm-firma-btn,
+      .campana,
+      .hm-btn,
+      .rfm-volver,
+      .rfm-otra,
+      .rf-rechazar,
+      .rf-salir,
+      .rf-check,
+      .rf-radio,
+      .fa-borrar,
+      .pi-borrar,
+      .pi-m-subir,
+      .det-v-l,
+      .enlace,
+      .pg
+    ) {
+    position: relative;
+  }
+  :where(
+      .caja-btn,
+      .cu-ojo,
+      .hist-menu-btn,
+      .hist-m-filtros,
+      .hist-check,
+      .hist-chip,
+      .dlg-cerrar,
+      .fm-foto-quitar,
+      .fm-hoja-cerrar,
+      .fm-hm-btn,
+      .fm-toast-ir,
+      .fm-firma-btn,
+      .campana,
+      .hm-btn,
+      .rfm-volver,
+      .rfm-otra,
+      .rf-rechazar,
+      .rf-salir,
+      .rf-check,
+      .rf-radio,
+      .fa-borrar,
+      .pi-borrar,
+      .pi-m-subir,
+      .det-v-l,
+      .enlace,
+      .pg
+    )::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: max(100%, 40px);
+    height: max(100%, 40px);
+    transform: translate(-50%, -50%);
+  }
+}

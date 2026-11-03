@@ -1,0 +1,59 @@
+/* Tokens del diseño (diseno/diseno.pen → design-ref/html). Los nombres siguen el uso en las pantallas. */
+:root {
+  /* Marca y navegación */
+  --nav-bg: #0a2540;
+  --nav-activo: #123759;
+  --nav-borde: #1e4a73;
+  --nav-texto: #b7c6d8;
+  --nav-titulo: #7f93ab;
+  --primary: #0b4f8a;
+  --primary-soft: #e6eff8;
+  --accent: #009fda;
+  --accent-claro: #7fd3f2;
+  --accent-soft: #009fda14;
+  --en-linea: #4ade80;
+  --fuel: #e8a317;
+  --fuel-soft: #fff6e0;
+  --amber: #f5a524;
+
+  /* Superficies y texto */
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --border: #dfe3ea;
+  --border-fuerte: #c3cbd6;
+  --neutral-soft: #edf0f4;
+  --text: #172b4d;
+  --text-2: #44546f;
+  --muted: #6b778c;
+  --muted-2: #9aa5b5;
+
+  /* Estados */
+  --success: #1f845a;
+  --success-soft: #dcfff1;
+  --success-borde: #b5ebd3;
+  --warning: #b65c02;
+  --warning-soft: #fff4e5;
+  --warning-borde: #f5c77e;
+  --danger: #c9372c;
+  --danger-soft: #ffeceb;
+  --danger-borde: #f5b7b1;
+  --info-soft: #e9f2ff;
+  --purple: #6e5dc6;
+  --purple-soft: #f3f0ff;
+
+  /* Tipografía */
+  --font: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --firma: 'Caveat', cursive;
+
+  /* Sombras */
+  --sombra-tarjeta: 0px 8px 24px #0a25400f;
+  --sombra-dialogo: 0px 8px 24px #0a254033;
+  --sombra-fab: 0px 4px 12px #0b4f8a40;
+  --sombra-sm: 0px 1px 2px #0a25401a;
+
+  --sidebar-w: 228px;
+  --rail-w: 84px;
+  --topbar-h: 56px;
+}
