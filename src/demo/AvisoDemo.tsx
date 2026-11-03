@@ -25,7 +25,7 @@ export function AvisoDemo() {
       }}
     >
       <span>
-        <strong>Demostración</strong> · datos de ejemplo; entre con cualquier correo. Los cambios se pierden al recargar.
+        <strong>Demostración</strong> · datos de ejemplo; pulse «Entrar a mi espacio», no hace falta escribir nada. Los cambios se pierden al recargar.
       </span>
       <button
         type="button"

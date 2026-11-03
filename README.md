@@ -2,7 +2,7 @@
 
 Esta rama (`front-vercel`) contiene **solo el front** para mostrar la interfaz a los clientes. No necesita la API:
 con `VITE_DEMO=1` (archivo `.env.production`) las peticiones se responden en el navegador (`src/demo/`) con los
-datos de ejemplo del diseño, se entra con cualquier correo y los cambios se pierden al recargar.
+datos de ejemplo del diseño, se entra sin escribir nada (o con cualquier correo) y los cambios se pierden al recargar.
 
 **Vercel:** importar el repositorio, elegir la rama `front-vercel` y dejar la configuración que trae `vercel.json`
 (Vite, `npm run build`, salida `dist`). El código de trabajo sigue en `main` (carpeta `web/`).

@@ -8,6 +8,7 @@ import { leerTotalFinalizadas } from './totalFinalizadas';
 import './login.css';
 import { ServidorPrueba } from '../app/AvisosApp';
 import { config } from '../config';
+import { esDemo } from '../demo/apiDemo';
 
 /** Panel de marca (degradado) de Login, Primer ingreso y Firmar en esta tablet. */
 export function PanelMarca({
@@ -86,7 +87,8 @@ export function Login() {
   const entrar = async (registro = false) => {
     setError(null);
     setAviso(null);
-    const c = correo.trim();
+    // demostración: se entra sin validar nada, para que cualquiera pueda recorrer la interfaz
+    const c = esDemo && !CORREO_VALIDO.test(correo.trim()) ? 'demo@egehid.gob.do' : correo.trim();
     if (ldap && (!c || !clave)) return setError('Escriba su usuario y contraseña del dominio.');
     if (sesion.modo === 'dev' && !CORREO_VALIDO.test(c)) return setError('Escriba un correo válido.');
     if (auth0 && c && !CORREO_VALIDO.test(c)) return setError('Escriba un correo válido.');
